@@ -21,12 +21,10 @@ const CountryList: FC = () => {
     return <span>error</span>;
   }
 
-  console.log(countries);
-
   return (
     <PageContainer>
       <AppTitle>Countries App</AppTitle>
-      <CardList />
+      <CardList countries={countries} />
     </PageContainer>
   );
 };

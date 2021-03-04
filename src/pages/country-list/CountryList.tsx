@@ -1,8 +1,8 @@
 import React, { FC, useContext, useEffect } from 'react';
 import { AppTitle } from '../../components/app-title';
 import { CardList } from '../../components/card-list';
+import { Container } from '../../components/container';
 import { CountryContext, fetchCountries } from '../../context';
-import { PageContainer } from './styles';
 
 const CountryList: FC = () => {
   const { state, dispatch } = useContext(CountryContext);
@@ -22,10 +22,10 @@ const CountryList: FC = () => {
   }
 
   return (
-    <PageContainer>
+    <Container>
       <AppTitle>Countries App</AppTitle>
       <CardList countries={countries} />
-    </PageContainer>
+    </Container>
   );
 };
 

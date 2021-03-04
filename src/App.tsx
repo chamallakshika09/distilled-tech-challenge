@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { AppTitle } from './components/app-title';
+import CountryList from './pages/country-list/CountryList';
 
 const App: FC = () => {
-  return <AppTitle>Countries App</AppTitle>;
+  return <CountryList />;
 };
 
 export default App;

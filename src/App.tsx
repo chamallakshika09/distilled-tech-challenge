@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
-import CountryList from './pages/country-list/CountryList';
+import { BrowserRouter } from 'react-router-dom';
 import { CountryProvider } from './context';
+import MainRouter from './routes/MainRouter';
 
 const App: FC = () => {
   return (
-    <CountryProvider>
-      <CountryList />
-    </CountryProvider>
+    <BrowserRouter>
+      <CountryProvider>
+        <MainRouter />
+      </CountryProvider>
+    </BrowserRouter>
   );
 };
 

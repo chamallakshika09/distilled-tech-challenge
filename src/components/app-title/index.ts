@@ -1,1 +1,1 @@
-export { AppTitle } from './AppTitle';
+export { AppTitle } from './styles';

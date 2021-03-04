@@ -1,0 +1,1 @@
+export { CardBorderText } from './CardBorderText';

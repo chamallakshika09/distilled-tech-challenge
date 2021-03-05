@@ -15,7 +15,7 @@ const CountryDetails: FC = () => {
   const { countryCode } = params as { countryCode: string };
 
   const handleClick = () => {
-    history.push(`/`);
+    history.goBack();
   };
 
   return (

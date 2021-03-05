@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Country, formatNumbers, getFormattedList } from '../../utils';
+import { Country, formatNumbers, getFormattedString } from '../../utils';
 import { Text } from '../text';
 import { CardTextContainer } from './styles';
 
@@ -12,8 +12,8 @@ export const DescriptionSection: FC<DescriptionSectionProps> = ({ country }) => 
     <CardTextContainer>
       <Text fontSize="16px">{`Capital: ${country.capital}`}</Text>
       <Text fontSize="16px">{`Population: ${formatNumbers(country.population)}`}</Text>
-      <Text fontSize="16px">{`Currency: ${getFormattedList(country.currencies)}`}</Text>
-      <Text fontSize="16px">{`Languages: ${getFormattedList(country.languages)}`}</Text>
+      <Text fontSize="16px">{`Currency: ${getFormattedString(country.currencies)}`}</Text>
+      <Text fontSize="16px">{`Languages: ${getFormattedString(country.languages)}`}</Text>
     </CardTextContainer>
   );
 };

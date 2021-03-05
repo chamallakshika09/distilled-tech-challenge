@@ -1,26 +1,12 @@
-import React, { FC, useContext, useEffect } from 'react';
+import React, { FC, useContext } from 'react';
 import { AppTitle } from '../../components/app-title';
 import { CardList } from '../../components/card-list';
 import { Container } from '../../components/container';
-import { CountryContext, fetchCountries } from '../../context';
+import { CountryContext } from '../../context';
 
 const CountryList: FC = () => {
-  const { state, dispatch } = useContext(CountryContext);
-
-  useEffect(() => {
-    fetchCountries(dispatch);
-  }, [dispatch]);
-
-  const { loading, error, countries } = state;
-
-  if (loading) {
-    return <span>Loading...</span>;
-  }
-
-  if (error) {
-    return <span>error</span>;
-  }
-
+  const { state } = useContext(CountryContext);
+  const { countries } = state;
   return (
     <Container>
       <AppTitle>Countries App</AppTitle>

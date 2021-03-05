@@ -1,16 +1,25 @@
-import React, { FC } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { CountryProvider } from './context';
+import React, { FC, useContext, useEffect } from 'react';
+import { CountryContext, fetchCountries } from './context';
 import MainRouter from './routes/MainRouter';
 
 const App: FC = () => {
-  return (
-    <BrowserRouter>
-      <CountryProvider>
-        <MainRouter />
-      </CountryProvider>
-    </BrowserRouter>
-  );
+  const { state, dispatch } = useContext(CountryContext);
+
+  useEffect(() => {
+    fetchCountries(dispatch);
+  }, [dispatch]);
+
+  const { loading, error } = state;
+
+  if (loading) {
+    return <span>Loading...</span>;
+  }
+
+  if (error) {
+    return <span>error</span>;
+  }
+
+  return <MainRouter />;
 };
 
 export default App;

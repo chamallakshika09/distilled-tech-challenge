@@ -23,15 +23,15 @@ export type Country = {
   timezones: string[];
   topLevelDomain: string[];
   translations: {
-    br: string;
-    de: string;
-    es: string;
-    fa: string;
-    fr: string;
-    hr: string;
-    it: string;
-    ja: string;
-    nl: string;
-    pt: string;
+    br?: string;
+    de?: string;
+    es?: string;
+    fa?: string;
+    fr?: string;
+    hr?: string;
+    it?: string;
+    ja?: string;
+    nl?: string;
+    pt?: string;
   };
 };

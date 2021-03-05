@@ -1,4 +1,5 @@
 import React, { FC, useContext, useEffect } from 'react';
+import { ErrorText } from './components/error-text';
 import { Spinner } from './components/spinner';
 import { CountryContext, fetchCountries } from './context';
 import MainRouter from './routes/MainRouter';
@@ -17,7 +18,7 @@ const App: FC = () => {
   }
 
   if (error) {
-    return <span>error</span>;
+    return <ErrorText>Failed to fetch country data</ErrorText>;
   }
 
   return <MainRouter />;

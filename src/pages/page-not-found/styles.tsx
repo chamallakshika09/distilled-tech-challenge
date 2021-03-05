@@ -7,6 +7,6 @@ export const Container = styled.div`
   margin: 50px;
 `;
 
-export const Text = styled.div`
+export const Text = styled.p`
   font-size: 16px;
 `;

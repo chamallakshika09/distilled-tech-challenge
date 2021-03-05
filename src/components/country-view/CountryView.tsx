@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Country } from '../../utils';
 import { CountryTitle } from '../country-title';
+import { DescriptionSection } from '../description-section';
 import { Image } from '../flag-image';
 
 interface CountryViewProps {
@@ -15,6 +16,7 @@ export const CountryView: FC<CountryViewProps> = ({ countryCode, countries }) =>
     <React.Fragment>
       <Image src={country.flag} alt={`${country.name} flag`} height="200px" />
       <CountryTitle>{country.name}</CountryTitle>
+      <DescriptionSection country={country} />
     </React.Fragment>
   );
 };
